@@ -172,13 +172,13 @@ i2c = busio.I2C(i2c_scl, i2c_sda)
 # using in your configuration by commenting out the 
 # ones you're not using
 
-distance = DistanceSensor_vl53l0x(i2c)
-#distance = DistanceSensor_vl53l4cd(i2c)
+#distance = DistanceSensor_vl53l0x(i2c)
+distance = DistanceSensor_vl53l4cd(i2c)
 distance.start()
 # distance.dump()
 #play = DummyPlaySensor()
-play = ButtonPlaySensor(board.GP17)
-#play = PressureSensor_BMP280(i2c)
+#play = ButtonPlaySensor(board.GP17)
+play = PressureSensor_BMP280(i2c)
 
 mouse_down = False
 readingCount = 0
